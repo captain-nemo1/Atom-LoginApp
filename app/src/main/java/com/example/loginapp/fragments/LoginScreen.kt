@@ -114,6 +114,9 @@ class LoginScreen : Fragment() {
 
     /**
      * Logs in the user if he has an account already
+     * @param email email of the current User
+     * @param password password of the current User
+     * @param logInButton Transition button
      */
     private fun logInUser(
         email: String,

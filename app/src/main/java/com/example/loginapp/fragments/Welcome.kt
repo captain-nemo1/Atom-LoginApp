@@ -40,7 +40,7 @@ class Welcome : Fragment() {
         if (FirebaseAuth.getInstance().currentUser != null)
             (getString(R.string.hi) + " " + FirebaseAuth.getInstance().currentUser!!.displayName?.substringBefore(
                 " "
-            ) + "!").also { userName.text = it }
+            ) + "!").also { userName.text = it } // Shows 'Hi!, $Username!'
 
         logOutButton.setOnClickListener {
             logOutButton.startAnimation()

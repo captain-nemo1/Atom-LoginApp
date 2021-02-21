@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Handles the icon of the Floating Theme Change Button
+     * @param currentThemeMode stores the current theme value
      */
     private fun changeCurrentThemeIcon(currentThemeMode: Int) {
         if (currentThemeMode == ThemeMode.Light.value)
@@ -112,6 +113,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Stores the value of the current theme in SharedPreference
+     * @param currentThemeMode stores the current theme value
      */
     private fun storeCurrentTheme(currentThemeMode: Int) {
         val sharedPref = getPreferences(Context.MODE_PRIVATE) ?: return
@@ -123,6 +125,8 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Replace fragment to the one passed as argument
+     * @param supportFragmentManager is the Fragment manager of the Fragment
+     * @param newInstance the new fragment that is to be showm
      */
     fun changeFragment(supportFragmentManager: FragmentManager, newInstance: Fragment) {
         supportFragmentManager.beginTransaction()
@@ -134,7 +138,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      *  Check if the given email is valid or not
-     *  returns null if no errors
+     *  @returns null if no errors
      *  otherwise returns the error found
      */
     fun validateEmail(emailId: TextInputEditText): String? {
@@ -147,7 +151,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      *  Check if the given password is valid or not
-     *  returns null if no errors
+     *  @returns null if no errors
      *  otherwise returns the error found
      */
     fun validatePassword(password: TextInputEditText): String? {
@@ -158,6 +162,11 @@ class MainActivity : AppCompatActivity() {
         return null
     }
 
+    /**
+     * Checks if the given string has length 0 or not
+     * @param text the string to be checked
+     * @return true if empty else returns false
+     */
     fun isEmpty(text: String): Boolean {
         return TextUtils.isEmpty(text)
     }
@@ -165,7 +174,7 @@ class MainActivity : AppCompatActivity() {
     /**
      *  Google Sign in function
      *  Used in LoginScreen Fragment and SignIn Fragment
-     *  transitionButton: TransitionButton :
+     *  @param transitionButton the signUp or logIn button from respective fragments
      */
     fun signIn(transitionButton: TransitionButton) {
         val signInIntent = googleSignInClient.signInIntent

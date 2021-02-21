@@ -143,6 +143,10 @@ class SignIn : Fragment() {
 
     /**
      *  Creates a new user and adds it to Firebase
+     *  @param name name of the current User
+     *  @param email email of the current User
+     *  @param password password of the current User
+     *  @param signUp Transition Button
      */
     private fun createUser(
         name: String,
@@ -170,6 +174,8 @@ class SignIn : Fragment() {
     /**
      * Adds the name of the currentUser to the Firebase Authentication data
      * and takes to Welcome Fragment
+     * @param auth current Firebase Authentication instance
+     * @param name name of the current user
      */
     private fun addNameToData(auth: FirebaseAuth, name: String) {
         val user = auth.currentUser
@@ -189,8 +195,10 @@ class SignIn : Fragment() {
 
     /**
      *  Checks if the password and confirmPassword are same or not
-     *  returns null if same
+     *  @returns null if same
      *  otherwise returns the error
+     *  @param password EditText of the password field
+     *  @param confirmPassword EditText of the confirm password field
      */
     private fun samePasswordEntered(
         password: TextInputEditText,
