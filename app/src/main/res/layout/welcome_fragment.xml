@@ -15,37 +15,32 @@
             android:id="@+id/namasteImage"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="237dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="37dp"
             android:contentDescription="@string/yoga_posture"
             android:src="@drawable/ic_namaste"
             app:layout_constraintBottom_toTopOf="@+id/greetingsMessage"
-            app:layout_constraintHeight_percent=".3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.40"
+            app:layout_constraintTop_toBottomOf="@+id/userName"
             app:layout_constraintWidth_percent=".8" />
 
         <TextView
             android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="39dp"
             android:text="@string/username_placeholder"
             android:textColor="@color/colorAccent"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/namasteImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.639" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/greetingsMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="120dp"
             android:text="@string/greetings_message"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/logOutButton"
@@ -57,14 +52,12 @@
             android:id="@+id/logOutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="87dp"
             android:background="@xml/roundcorner"
             android:text="@string/log_out"
             android:textColor="@android:color/white"
             app:defaultColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/greetingsMessage" />
 
