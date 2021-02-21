@@ -140,6 +140,7 @@ class LoginScreen : Fragment() {
                     errorText.visibility = View.VISIBLE
                     (activity as MainActivity?)?.themeButton?.isEnabled =
                         MainActivity.Companion.ThemeButtonState.Enabled.state
+                    (activity as MainActivity?)?.releaseOrientationAfterWorkDone()
                 }
             }
     }
