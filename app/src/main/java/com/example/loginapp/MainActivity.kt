@@ -2,6 +2,7 @@ package com.example.loginapp
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Bundle
 import android.text.TextUtils
@@ -134,6 +135,21 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.container, newInstance)
             .commitNow()
         themeButton.isEnabled = ThemeButtonState.Enabled.state
+        releaseOrientationAfterWorkDone()
+    }
+
+    /**
+     * Doesn't change orientation when loading goes on
+     */
+    fun fixOrientationWhenWorking(){
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_NOSENSOR
+    }
+
+    /**
+     * Releases orientation fix
+     */
+    fun releaseOrientationAfterWorkDone(){
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR
     }
 
     /**
@@ -181,6 +197,7 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(signInIntent, RC_SIGN_IN)
         this.transitionButton = transitionButton
         themeButton.isEnabled = ThemeButtonState.Disabled.state
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_NOSENSOR
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

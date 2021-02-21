@@ -154,6 +154,7 @@ class SignIn : Fragment() {
         password: String,
         signUpButton: TransitionButton
     ) {
+        (activity as MainActivity?)?.fixOrientationWhenWorking()
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { signIn ->
                 if (signIn.isSuccessful) {

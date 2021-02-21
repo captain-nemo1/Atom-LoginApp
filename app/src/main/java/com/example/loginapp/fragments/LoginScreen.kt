@@ -123,6 +123,7 @@ class LoginScreen : Fragment() {
         password: String,
         logInButton: TransitionButton
     ) {
+        (activity as MainActivity?)?.fixOrientationWhenWorking()
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { signIn ->
                 if (signIn.isSuccessful) {
