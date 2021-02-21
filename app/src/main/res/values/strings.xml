@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Login App</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="log_in_msg">Log into your existing account</string>
+    <string name="password">Password</string>
+    <string name="connect_using">Or connect using</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="google_icon">Google Icon</string>
+    <string name="yoga_posture">Yoga Posture</string>
+    <string name="start_msg">Let\'s get started!</string>
+    <string name="create_account">Create an account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="email_id">Email Id</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="hi">Hi, </string>
+    <string name="username_placeholder">Hi, User</string>
+    <string name="greetings_message">Let\'s Get Started</string>
+    <string name="log_out">Log Out</string>
+    <string name="theme_mode">ThemeMode</string>
+    <string name="no_internet">No internet Connection</string>
+</resources>
